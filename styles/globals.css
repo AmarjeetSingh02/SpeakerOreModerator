@@ -26,4 +26,19 @@
   button {
     @apply bg-orange-500 cursor-pointer mr-2 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-md;
   }
+  .error-msg{
+    font-size: 12px;
+    width: 100%;
+    color: red;
+  }
+  .success-msg{
+    width:100%;
+    background-color: #0f834d;
+    color: #fff;
+    font-weight: 600 ;
+    padding: 20px;
+
+  }
+
+  
 }

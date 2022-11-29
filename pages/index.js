@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import LoginPage from "./LoginPage";
 
 export default function Home() {
   const [users, setUsers] = useState([]);
@@ -59,9 +60,17 @@ export default function Home() {
       console.log(error);
     }
   };
+  const [isLogin, setIsLogin]= useState(false)
+   const toShowhaldler=(e)=>{
+    setIsLogin(e)
+
+   }
 
   return (
-    <div className="mx-6">
+    <>
+
+     <LoginPage  toShowhaldler={toShowhaldler}/>
+   {isLogin && <div className="mx-6">
       <Head>
         <title>SpeakerOre Admin</title>
       </Head>
@@ -129,6 +138,7 @@ export default function Home() {
             );
           })}
       </div>
-    </div>
+    </div>}
+    </>
   );
 }
